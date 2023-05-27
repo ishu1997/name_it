@@ -1,0 +1,13 @@
+.input-box {
+    font-family: 'Hachi maru Pop', cursive;
+    width: 400px;
+    height: 40px;
+    border-radius: 25px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}

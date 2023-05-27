@@ -1,10 +1,26 @@
-import React from 'react'
+import React from 'react';
+import './App.css';
+import Header from '../Header/Header';
+import Searchbox from '../SearchBox/Searchbox';
 
 
 // class based
 class App extends React.Component {
+
+    // state provided by react
+
+    state = {
+        headerText: 'Name It!'
+    }
+
     render() {
-        return <h1>this is my functional component</h1>
+        return (
+            <div>
+                {/* passing props as headerTitle variable */}
+                <Header headerTitle={this.state.headerText} />
+                <Searchbox />
+            </div>
+        )
     }
 }
 
