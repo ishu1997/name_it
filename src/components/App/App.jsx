@@ -10,15 +10,22 @@ class App extends React.Component {
     // state provided by react
 
     state = {
-        headerText: 'Name It!'
+        headerText: 'Name It!',
+        headerExpanded: true
+    }
+
+    handleInputChange = (keyword) => {
+        this.setState({ headerExpanded: false });
+        console.log(keyword);
+        console.log(this.state.headerExpanded);
     }
 
     render() {
         return (
             <div>
                 {/* passing props as headerTitle variable */}
-                <Header headerTitle={this.state.headerText} />
-                <Searchbox />
+                <Header headerExpanded={this.state.headerExpanded} headerTitle={this.state.headerText} />
+                <Searchbox HandleInputChange={this.handleInputChange} />
             </div>
         )
     }
