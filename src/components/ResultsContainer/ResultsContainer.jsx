@@ -10,7 +10,7 @@ const ResultsContainer = ({ suggestedNames }) => {
 
 
     const suggestedNamesJSX = suggestedNames.map((suggestedName) => {
-        return <NameCard key={suggestedName} suggestedName={suggestedName} />
+        return <NameCard key={suggestedName + Date + (Math.random() * 100)} suggestedName={suggestedName} />
     })
 
     return (
